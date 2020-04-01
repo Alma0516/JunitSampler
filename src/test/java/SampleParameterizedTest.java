@@ -20,7 +20,7 @@ public class SampleParameterizedTest {
     @MethodSource("methodSource")
     public void forParameterizedTest(String testData, TestReporter testReporter) {
         testReporter.publishEntry(Tm4jExtension.TEST_CASE_KEY,"SCENARIO_1");
-        System.out.println(testData);
+        System.out.println(testData);// todo передать неск-ко ключей
     }
 
     public static Stream<String> methodSource() {
