@@ -1,0 +1,10 @@
+{
+  "version" : 1,
+  "executions" : [ {
+    "source" : "[1] TEST_PROJECT_PARAM",
+    "result" : "Passed",
+    "testCase" : {
+      "key" : "TEST_PROJECT_PARAM"
+    }
+  } ]
+}
