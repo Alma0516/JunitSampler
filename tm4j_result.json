@@ -1,6 +1,10 @@
 {
   "version" : 1,
   "executions" : [ {
+    "source" : "testName()",
+    "result" : "Passed",
+    "testCase" : { }
+  }, {
     "source" : "[1] arg1",
     "result" : "Passed",
     "testCase" : {
