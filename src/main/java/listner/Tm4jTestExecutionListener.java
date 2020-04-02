@@ -1,4 +1,4 @@
-package alma;
+package listner;
 
 import com.adaptavist.tm4j.junit.customformat.CustomFormatConstants;
 import com.adaptavist.tm4j.junit.customformat.CustomFormatContainer;
@@ -50,6 +50,7 @@ public class Tm4jTestExecutionListener implements TestExecutionListener {
                     CustomFormatExecution passedExecution = new CustomFormatExecution();
                     passedExecution.setResult(CustomFormatConstants.PASSED);
                     passedExecution.setSource(testIdentifier.getDisplayName());
+                    System.out.println(testIdentifier.getUniqueId());
                     passedExecution.setTestCase(testIdentifierToTestCaseMap.get(testIdentifier.getUniqueId()));
                     customFormatContainer.addResult(passedExecution);
                     break;

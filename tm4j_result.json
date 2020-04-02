@@ -1,16 +1,20 @@
 {
   "version" : 1,
   "executions" : [ {
-    "source" : "[1] arg1",
+    "source" : "[1] arg.TestData@10dba097",
     "result" : "Passed",
-    "testCase" : {
-      "key" : "SCENARIO_1"
-    }
+    "testCase" : { }
   }, {
-    "source" : "[2] arg2",
+    "source" : "[2] arg.TestData@701fc37a",
     "result" : "Passed",
-    "testCase" : {
-      "key" : "SCENARIO_1"
-    }
+    "testCase" : { }
+  }, {
+    "source" : "[1] arg.TestData@71a794e5",
+    "result" : "Passed",
+    "testCase" : { }
+  }, {
+    "source" : "[2] arg.TestData@4df828d7",
+    "result" : "Passed",
+    "testCase" : { }
   } ]
 }
