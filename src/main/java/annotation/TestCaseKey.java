@@ -14,5 +14,5 @@ import java.lang.annotation.Target;
 @ExtendWith(Tm4jExtension.class)
 public @interface TestCaseKey {
 
-    String[] keys();
+    String[] keys() default {};
 }

@@ -51,7 +51,7 @@ public class Tm4jTestExecutionListener implements TestExecutionListener {
                     passedExecution.setResult(CustomFormatConstants.PASSED);
                     passedExecution.setSource(testIdentifier.getDisplayName());
                     System.out.println(testIdentifier.getUniqueId());
-                    passedExecution.setTestCase(testIdentifierToTestCaseMap.get(testIdentifier.getUniqueId()));// todo
+                    passedExecution.setTestCase(testIdentifierToTestCaseMap.get(testIdentifier.getUniqueId()));// todo пока не ставятся ключи тестовых сценариев
                     customFormatContainer.addResult(passedExecution);
                     break;
 
