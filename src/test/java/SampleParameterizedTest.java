@@ -4,6 +4,7 @@ import app.Calculator;
 import arg.TestData;
 import org.junit.jupiter.api.TestReporter;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.HashMap;
@@ -45,7 +46,8 @@ public class SampleParameterizedTest {
         testReporter.publishEntry(keys);
     }
 
-    public static Stream<TestData> methodSource() {
-        return Stream.of(new TestData(1, 1, 2), new TestData(2, 2, 4));
+    public static Stream<Arguments> methodSource() {
+        return Stream.of(Arguments.of(new TestData(1, 1, 2)),
+                        Arguments.of(new TestData(2, 2, 4)));
     }
 }

@@ -51,7 +51,7 @@ public class Tm4jTestExecutionListener implements TestExecutionListener {
                     passedExecution.setResult(CustomFormatConstants.PASSED);
                     passedExecution.setSource(testIdentifier.getDisplayName());
                     System.out.println(testIdentifier.getUniqueId());
-                    passedExecution.setTestCase(testIdentifierToTestCaseMap.get(testIdentifier.getUniqueId()));
+                    passedExecution.setTestCase(testIdentifierToTestCaseMap.get(testIdentifier.getUniqueId()));// todo
                     customFormatContainer.addResult(passedExecution);
                     break;
 
@@ -77,12 +77,12 @@ public class Tm4jTestExecutionListener implements TestExecutionListener {
     @Override
     public void reportingEntryPublished(TestIdentifier testIdentifier, ReportEntry entry) {
         Map<String, String> map = entry.getKeyValuePairs();
-
-        CustomFormatTestCase c = new CustomFormatTestCase();
-        if (map.containsKey(Tm4jExtension.TEST_CASE_KEY)) {
-            c.setKey(map.get(Tm4jExtension.TEST_CASE_KEY));
-        }
-
-        testIdentifierToTestCaseMap.put(testIdentifier.getUniqueId(), c);
+        for (String key:map.keySet()){
+           if (map.containsKey(key)) {
+               CustomFormatTestCase c = new CustomFormatTestCase();
+               c.setKey(map.get(Tm4jExtension.TEST_CASE_KEY));
+               testIdentifierToTestCaseMap.put(testIdentifier.getUniqueId(), c);
+           }
+       }
     }
 }

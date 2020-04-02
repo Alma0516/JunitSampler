@@ -9,7 +9,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-//@Test
 @Target({ ElementType.METHOD , ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @ExtendWith(Tm4jExtension.class)
