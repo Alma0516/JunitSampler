@@ -5,6 +5,7 @@ import annotation.TestCaseKey;
 import app.Calculator;
 import arg.TestData;
 import org.junit.jupiter.api.TestReporter;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -21,6 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 //Из метода нельзя ефлекчивно получить значения его параметров  - см ссылку
 //https://stackoverflow.com/questions/16957032/programmatically-retrive-parameters-and-values-of-a-method
+@ExtendWith(TestCaseInstanceFactory.class)
 public class SampleParameterizedTest {
 
     @TestCaseKey(keys = "SCENARIO_1")
