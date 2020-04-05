@@ -1,16 +1,4 @@
 {
   "version" : 1,
-  "executions" : [ {
-    "source" : "[1] arg.TestData@78186a70",
-    "result" : "Passed",
-    "testCase" : {
-      "key" : "TC1"
-    }
-  }, {
-    "source" : "[2] arg.TestData@1176dcec",
-    "result" : "Passed",
-    "testCase" : {
-      "key" : "TC1"
-    }
-  } ]
+  "executions" : [ ]
 }
