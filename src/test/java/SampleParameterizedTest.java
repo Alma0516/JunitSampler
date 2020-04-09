@@ -1,6 +1,6 @@
 import annotation.CustomParamsMarker;
 import arg.CustomArguments;
-import listner.Tm4jExtension;
+//import listner.Tm4jExtension;
 import annotation.TestCaseKey;
 import app.Calculator;
 import arg.TestData;
@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 //Из метода нельзя ефлекчивно получить значения его параметров  - см ссылку
 //https://stackoverflow.com/questions/16957032/programmatically-retrive-parameters-and-values-of-a-method
-@ExtendWith(TestCaseInstanceFactory.class)
+//@ExtendWith(TestCaseInstanceFactory.class)
 public class SampleParameterizedTest {
 
     @TestCaseKey(keys = "SCENARIO_1")
@@ -53,8 +53,8 @@ public class SampleParameterizedTest {
         System.out.println(sum);
         //вариант2 - ставить ключи вручгую + убрать аннотацию @Test + убирать TestCaseKey
         Map<String, String> keys = new HashMap<>();
-        keys.put(Tm4jExtension.TEST_CASE_KEY.concat("1"), "SCENARIO_1");
-        keys.put(Tm4jExtension.TEST_CASE_KEY.concat("2"), "SCENARIO_2");
+        /*keys.put(Tm4jExtension.TEST_CASE_KEY.concat("1"), "SCENARIO_1");
+        keys.put(Tm4jExtension.TEST_CASE_KEY.concat("2"), "SCENARIO_2");*/
         testReporter.publishEntry(keys);
     }
 
